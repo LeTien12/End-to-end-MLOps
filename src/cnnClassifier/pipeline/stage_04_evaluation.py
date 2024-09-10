@@ -19,7 +19,7 @@ class EvaluationPipeline:
         evaluation.evaluation()
         evaluation.save_score()
         
-    def excute(self):
+    def execute(self):
         try:
             logger.info(f"*******************")
             logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
@@ -29,3 +29,7 @@ class EvaluationPipeline:
             logger.exception(e)
             raise e
         
+
+if __name__ == "__main__":
+    pipeline = EvaluationPipeline()
+    pipeline.execute()

@@ -27,7 +27,7 @@ class ModelTrainingPipeline:
             callback_list=callback_list
         )
         
-    def excute(self):
+    def execute(self):
         try:
             logger.info(f"*******************")
             logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
@@ -37,3 +37,6 @@ class ModelTrainingPipeline:
             logger.exception(e)
             raise e
 
+if __name__ == "__main__":
+    pipeline = ModelTrainingPipeline()
+    pipeline.execute()

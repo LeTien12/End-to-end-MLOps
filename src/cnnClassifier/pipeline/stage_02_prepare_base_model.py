@@ -12,7 +12,7 @@ class PrepareBaseModelTrainingPipeline:
         prepare_base_model.get_base_model()
         prepare_base_model.update_base_model()
         
-    def excute(self):
+    def execute(self):
         try:
             logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
             self.main()

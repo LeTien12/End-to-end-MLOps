@@ -25,6 +25,10 @@ class DataIngestionTrainingPipeline:
             logger.exception(e)
             raise e
         
+if __name__ == "__main__":
+    pipeline = DataIngestionTrainingPipeline()
+    pipeline.execute()
+        
 
 
 
