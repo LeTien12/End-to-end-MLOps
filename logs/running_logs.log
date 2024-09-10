@@ -592,3 +592,81 @@ x==========x]
 [2024-09-10 10:44:04,859: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-09-10 10:59:10,952: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.1.8:80]
+[2024-09-10 10:59:10,952: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-09-10 10:59:19,758: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 10:59:19] "GET / HTTP/1.1" 200 -]
+[2024-09-10 10:59:50,228: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 10:59:50] "POST /predict HTTP/1.1" 200 -]
+[2024-09-10 11:00:14,508: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:00:14] "GET / HTTP/1.1" 200 -]
+[2024-09-10 11:00:24,345: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:00:24] "[33mGET /training HTTP/1.1[0m" 404 -]
+[2024-09-10 11:00:24,383: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:00:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-09-10 11:00:33,496: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-09-10 11:00:33,497: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-10 11:00:33,498: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-10 11:00:33,509: INFO: common: created directory at: artifacts]
+[2024-09-10 11:00:33,510: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-09-10 11:00:35,148: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 11616915
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "adf745abc03891fe493c3be264ec012691fe3fa21d861f35a27edbe6d86a76b1"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B957:3DE65E:4C8211:5D11CD:66DFAF9C
+Accept-Ranges: bytes
+Date: Tue, 10 Sep 2024 04:00:34 GMT
+Via: 1.1 varnish
+X-Served-By: cache-qpg1270-QPG
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1725940834.086543,VS0,VE287
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 9dfb0dd6306e746b81661a42488942248d2047e2
+Expires: Tue, 10 Sep 2024 04:05:34 GMT
+Source-Age: 0
+
+]
+[2024-09-10 11:00:35,321: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-09-10 11:00:35,321: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model started <<<<<<]
+[2024-09-10 11:00:35,323: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-10 11:00:35,323: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-10 11:00:35,324: INFO: common: created directory at: artifacts]
+[2024-09-10 11:00:35,324: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-09-10 11:00:36,449: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare Base Model completed <<<<<<
+
+x==========x]
+[2024-09-10 11:00:36,449: INFO: stage_03_training: *******************]
+[2024-09-10 11:00:36,450: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2024-09-10 11:00:36,451: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-10 11:00:36,452: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-10 11:00:36,452: INFO: common: created directory at: artifacts]
+[2024-09-10 11:00:36,453: INFO: common: created directory at: artifacts\prepare_callbacks\checkpoint_dir]
+[2024-09-10 11:00:36,453: INFO: common: created directory at: artifacts\prepare_callbacks\tensorboard_log_dir]
+[2024-09-10 11:00:36,454: INFO: common: created directory at: artifacts\training]
+[2024-09-10 11:01:01,190: INFO: stage_03_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-09-10 11:01:01,190: INFO: stage_04_evaluation: *******************]
+[2024-09-10 11:01:01,191: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-09-10 11:01:01,191: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-09-10 11:01:01,192: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-09-10 11:01:01,192: INFO: common: created directory at: artifacts]
+[2024-09-10 11:01:07,364: INFO: common: json file saved at: scores.json]
+[2024-09-10 11:01:07,364: INFO: stage_04_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-09-10 11:01:07,742: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:01:07] "GET /train HTTP/1.1" 200 -]
+[2024-09-10 11:01:17,986: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:01:17] "GET / HTTP/1.1" 200 -]
+[2024-09-10 11:01:26,681: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:01:26] "POST /predict HTTP/1.1" 200 -]
+[2024-09-10 11:01:34,023: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:01:34] "POST /predict HTTP/1.1" 200 -]
+[2024-09-10 11:01:40,769: INFO: _internal: 127.0.0.1 - - [10/Sep/2024 11:01:40] "POST /predict HTTP/1.1" 200 -]
